@@ -19,12 +19,12 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
   try {
     const categoryData = await Category.findByPk(req.params.id, {
-      include: [{ model: Product, attributes: ["id", "product_name", "price", "stock", "category_id"],  }]
+      include: { model: Product, attributes: ["id", "product_name", "price", "stock", "category_id"] }
     });
-    if (categoryData) {
-      res.status(404).json({ message: 'No category found with this id.'});
-      return;
-    }
+    // if (categoryData) {
+    //   res.status(404).json({ message: 'No category found with this id.'});
+    //   return;
+    // }
     res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
@@ -55,7 +55,7 @@ router.put('/:id', async (req, res) => {
     });
     res.status(200).json(categoryData);
   } catch (err) {
-    res.status(400).json(err)
+    res.status(400).json(err);
   }
 });
 
