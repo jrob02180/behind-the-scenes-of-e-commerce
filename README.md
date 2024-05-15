@@ -2,7 +2,7 @@
 
 ## Description
 
-This application builds a back end for an e-commerce site. It configures an Express.js API to use Seqelize to interact with a MySQL database. Insomnia is then used to test routes for CRUD functions.
+This application builds a back end for an e-commerce site. It configures an Express.js API to use Sequelize to interact with a MySQL database. Insomnia is then used to test routes for CRUD functions.
 
 ## Installation Requirements
 
